@@ -68,6 +68,7 @@ void connect_wifi() {
 
     pc.printf("\nConnecting to %s...\n", MBED_CONF_APP_WIFI_SSID);
     int ret = wifi->connect(MBED_CONF_APP_WIFI_SSID, MBED_CONF_APP_WIFI_PASSWORD, NSAPI_SECURITY_WPA_WPA2);
+    if (ret != 0) {
     int cb=1;
     while (cb){
     int ret = wifi->connect(MBED_CONF_APP_WIFI_SSID, MBED_CONF_APP_WIFI_PASSWORD, NSAPI_SECURITY_WPA_WPA2);
@@ -78,6 +79,10 @@ void connect_wifi() {
         pc.printf("\nSuccess!\n");
         cb=0; 
     }
+   }
+   }
+   else {
+        pc.printf("\nSuccess!\n");
    }
 }
 
