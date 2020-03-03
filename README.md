@@ -6,3 +6,5 @@
 * push-to-read-temp is build from mbed-os 5.14
 * the following url is for query the data for temperature and humidity
   http://dry-island-70890.herokuapp.com/query
+
+* flask-ws-register: another approach of server-side webservice. Live at https://flask-ws-register.herokuapp.com/
